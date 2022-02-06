@@ -64,7 +64,6 @@ function addLeadingZero (value){
 refs.btnStart.addEventListener("click", (() => {
     const timeId = setInterval (() => {
         let residualTime = initTime - Date.now();
-        console.log(residualTime);
         if (residualTime > 0) {
         refs.days.textContent = convertMs(residualTime).days;
         refs.hours.textContent = convertMs(residualTime).hours;
