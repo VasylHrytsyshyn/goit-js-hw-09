@@ -61,7 +61,10 @@ function addLeadingZero (value){
   return String(value).padStart(2, "0");
 };
 
-refs.btnStart.addEventListener("click", (() => {
+refs.btnStart.addEventListener("click", dialUpdate);
+
+
+function dialUpdate() {
     const timeId = setInterval (() => {
         let residualTime = initTime - Date.now();
         if (residualTime > 0) {
@@ -74,8 +77,5 @@ refs.btnStart.addEventListener("click", (() => {
             clearInterval(timeId);
         };        
     }, 1000);
-}));
-
-
-
+}
 
